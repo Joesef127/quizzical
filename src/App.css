@@ -1,0 +1,147 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.quiz-list {
+  padding: 50px 0;
+  max-width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  z-index: 99;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.question-box {
+  padding: 20px 0;
+  border: 2px solid #0a1860;
+  border-width: 0 0 1px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &:last-child {
+    border-width: 0;
+  }
+}
+
+.question-div {
+  display: flex;
+  gap: 5px;
+}
+
+.question {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0a1860;
+  text-align: left;
+}
+
+.answer-list {
+  display: flex;
+  justify-content: safe;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.answer {
+  color: #0a1860;
+  padding: 4px 8px;
+  border-radius: 16px;
+  background: transparent;
+  border: 2px solid #0a1860;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+  text-overflow: clip;
+  width: fit-content;
+  height: fit-content;
+
+  &:hover {
+    border: 2px solid #0a1860;
+    background: rgba(10, 24, 96, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid rgba(10, 24, 96, 0.2);
+    background: rgba(10, 24, 96, 0.2);
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    /* visibility: hidden; */
+  }
+}
+
+.selected {
+  border: 2px solid rgba(10, 24, 96, 0.2);
+  background: rgba(10, 24, 96, 0.2);
+}
+
+.wrong {
+  background: rgba(231, 85, 85, 0.602);
+}
+
+.correct {
+  background: rgba(93, 233, 93, 0.606);
+}
+
+.btn-div {
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  gap: 10px;
+}
+
+.submit-btn {
+  background: #0a1860;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #0a1860;
+    border: 2px solid #0a1860;
+    background: transparent;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 99;
+
+  .score-report {
+    color: #0a1860;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
