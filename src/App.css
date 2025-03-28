@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex-direction: column;
   gap: 20px;
   overflow-y: scroll;
@@ -13,7 +13,7 @@
 
 .quiz-list {
   padding: 50px 0;
-  max-width: 80%;
+  max-width: 70%;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -120,6 +120,7 @@
   padding: 12px 24px;
   border-radius: 16px;
   border: 2px solid transparent;
+  font-size: 16px;
 
   &:hover,
   &:active,
@@ -144,4 +145,43 @@
 }
 
 @media screen and (max-width: 768px) {
+  html, body {overflow-y: hidden;}
+  .wrapper {
+    padding: 0 0 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quiz-list {
+    max-width: 80%;
+  }
+
+  .question-box {
+    border-width: 0 0 1px 0;
+  }
+
+  .answer, .question {
+    font-size: 12px;
+  }
+
+  .btn-div {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0 10px;
+
+    .score-report {
+      font-size: 12px;
+    }
+  }
+
+  .submit-btn {
+    font-size: 12px;
+  }
 }
