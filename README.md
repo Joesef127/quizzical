@@ -32,8 +32,10 @@ quizzical
 ```
 
 - **App.jsx** → Handles fetching quiz data and managing user interaction.
+- **Intro.jsx** → Intro page which leads to the main content
 - **Question.jsx** → Renders each question and its answer choices.
 - **App.css** → Contains styling for the UI.
+- **Index.css** → Contains general styles and styling for intro page.
 
 ---
 
